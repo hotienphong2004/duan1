@@ -1,5 +1,5 @@
 <?php require_once 'inc/header.php'; ?>
-<!-- Navigation -->
+
 <?php require_once 'inc/nav.php'; ?>
 
 <?php
@@ -30,20 +30,18 @@ $result_total = mysqli_fetch_assoc($query_total);
 $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 ?>
 
-<!-- Page info -->
 <div class="page-top-info">
     <div class="container">
 
 
-        <h4>Your Order History </h4>
+        <h4>Lịch Sử Đặt Hàng </h4>
         <div class="site-pagination">
-            <a href="index.php">Home</a> /
-            <a href="">Your Order History</a>
+            <a href="index.php">Trang chủ</a> /
+            <a href="">Lịch Sử Đặt Hàng</a>
         </div>
     </div>
 </div>
-<!-- Page info end -->
-<!-- cart section end -->
+
 <section class="cart-section spad" style="padding-top: 0;">
 
     <div class="container order">

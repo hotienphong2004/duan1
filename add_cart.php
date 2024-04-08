@@ -2,7 +2,7 @@
 <?php require_once './functions/functions.php'; ?>
 <?php session_start(); ?>
 <?php
-// $customer_id_for_nologin = rand(0, 10000);
+
 $_SESSION['user_id'] = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $customer_id = $_SESSION['user_id'];
 
@@ -37,9 +37,7 @@ if($customer_id == 0){
                 $_SESSION["shopping_cart"][] = $item;
             }
         } else {
-            // $_SESSION["shopping_cart"] = array_filter($_SESSION["shopping_cart"], function ($item) {
-            //     return !empty($item['product_id']) && !empty($item['product_title']) && !empty($item['product_price']) && !empty($item['product_image']) && !empty($item['product_quantity']);
-            // });
+          
             $item = array(
                 'product_id'    => $_POST["product_id"],
                 'product_title' => $_POST["product_title"],
@@ -74,9 +72,7 @@ if($customer_id == 0){
                 $_SESSION["shopping_cart"][] = $item;
             }
         } else {
-            // $_SESSION["shopping_cart"] = array_filter($_SESSION["shopping_cart"], function ($item) {
-            //     return !empty($item['product_id']) && !empty($item['product_title']) && !empty($item['product_price']) && !empty($item['product_image']) && !empty($item['product_quantity']);
-            // });
+          
             $item = array(
                 'product_id'    => $_POST["product_id"],
                 'product_title' => $_POST["product_title"],

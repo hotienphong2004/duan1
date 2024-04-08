@@ -1,5 +1,5 @@
 <?php require_once 'inc/header.php'; ?>
-<!-- Navigation -->
+
 <?php
 require_once 'inc/nav.php';
 
@@ -34,12 +34,12 @@ $result_total = mysqli_fetch_assoc($query_total);
 $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 ?>
 
-<!-- Page info -->
+
 <div class="page-top-info">
 	<div class="container">
-		<h4>Search for: <?php echo $keyword; ?></h4>
+		<h4>Tìm kiếm: <?php echo $keyword; ?></h4>
 		<div class="site-pagination">
-			<a href="index.php">Home</a>
+			<a href="index.php">Trang Chủ</a>
 			<a href="">
 				<?php
 				if ($result == null) {
@@ -53,10 +53,7 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 
 	</div>
 </div>
-<!-- Page info end -->
 
-
-<!-- Category section -->
 <section class="category-section spad">
 	<div class="container">
 		<div class="row">
@@ -77,7 +74,7 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 										</a>
 
 										<div class="pi-links">
-											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>Thêm vào giỏ hàng</span></a>
 											<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 										</div>
 									</div>
@@ -142,5 +139,5 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 
 
 </section>
-<!-- Category section end -->
+
 <?php require_once 'inc/footer.php'; ?>

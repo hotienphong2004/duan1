@@ -1,5 +1,5 @@
 <?php require_once 'inc/header.php'; ?>
-<!-- Navigation -->
+
 <?php
 require_once 'inc/nav.php';
 
@@ -20,8 +20,7 @@ $limit = 4; // Số danh muc trên mỗi trang
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Lấy số trang hiện tại
 $start = ($page - 1) * $limit; // Tính vị trí bắt đầu
 
-// $sql = "SELECT * FROM `order` LIMIT $start, $limit where customer_id = '$_SESSION['user_id']'"; // Lấy danh muc cho trang hiện tại
-// $sql = "SELECT * FROM `categories` WHERE id = '{$_GET['id']}' LIMIT $start, $limit";
+
 $sql = "SELECT products.*, categories.* FROM products 
 INNER JOIN categories ON products.category_name = categories.id 
 WHERE categories.id = '$cat_id ' and products.status = 1 LIMIT $start, $limit";
@@ -29,7 +28,7 @@ WHERE categories.id = '$cat_id ' and products.status = 1 LIMIT $start, $limit";
 
 $query = mysqli_query($con, $sql);
 
-// $sql_total = "SELECT COUNT(*) AS total FROM `categories` WHERE id = '{$_GET['id']}'"; // Tính tổng số danh muc
+
 $sql_total = "SELECT COUNT(*) AS total FROM products 
 INNER JOIN categories ON products.category_name = categories.id 
 WHERE categories.id = '{$cat_id}' and products.status = 1";
@@ -39,12 +38,12 @@ $result_total = mysqli_fetch_assoc($query_total);
 $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 ?>
 
-<!-- Page info -->
+
 <div class="page-top-info">
 	<div class="container">
-		<h4>CAtegory PAge</h4>
+		<h4>DANH MỤC TRANG</h4>
 		<div class="site-pagination">
-			<a href="category.php">Home</a>
+			<a href="category.php">Trang Chủ</a>
 			<a href="">
 				<?php
 				if ($result == null) {
@@ -57,9 +56,7 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 		</div>
 	</div>
 </div>
-<!-- Page info end -->
 
-<!-- Category section -->
 <section class="category-section spad">
 	<div class="container">
 		<div class="row">
@@ -78,7 +75,7 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 										</a>
 
 										<div class="pi-links">
-											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>Thêm vào giỏ  hàng</span></a>
 											<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 										</div>
 									</div>
@@ -146,5 +143,5 @@ $total_pages = ceil($result_total['total'] / $limit); // Tính tổng số trang
 
 
 </section>
-<!-- Category section end -->
+
 <?php require_once 'inc/footer.php'; ?>

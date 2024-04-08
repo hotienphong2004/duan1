@@ -19,10 +19,10 @@ if(isset($_SESSION['EMAIL_USER_LOGIN'])){
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
-			<h4>Login</h4>
+			<h4>Đăng Nhập</h4>
 			<div class="site-pagination">
-				<a href="index.php">Home</a> /
-				<a href="login.php">Login</a>
+				<a href="index.php">Trang Chủ</a> /
+				<a href="login.php">Đăng Nhập</a>
 			</div>
 		</div>
 	</div>
@@ -33,13 +33,13 @@ if(isset($_SESSION['EMAIL_USER_LOGIN'])){
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 contact-info mx-auto">
-					<h2 class="mb-3">Login</h2>
+					<h2 class="mb-3">Đăng Nhập</h2>
                     <div id="error"></div>
 					<div id="success"></div>
 					<form class="contact-form" method="post">
 						<input type="text" placeholder="Your e-mail" id="email">
 						<input type="password" placeholder="Password" id="password">
-						<button type="button" class="site-btn mb-3" id="btn_login">Login</button>
+						<button type="button" class="site-btn mb-3" id="btn_login">Đăng Nhập</button>
 					</form>
 				</div>
 			</div>

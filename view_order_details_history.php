@@ -19,10 +19,10 @@ $allDonHang = tatca_donhang($_SESSION['user_id']);
 <!-- Page info -->
 <div class="page-top-info">
     <div class="container">
-        <h4>Your Order History </h4>
+        <h4>Lịch Sử Đặt Hàng</h4>
         <div class="site-pagination">
-            <a href="index.php">Home</a>/
-            <a href="">Details Order</a>
+            <a href="index.php">Trang Chủ</a>/
+            <a href="">Chi tiết Đặt hàng</a>
         </div>
     </div>
 </div>
